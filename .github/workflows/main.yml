@@ -3,10 +3,10 @@ name: devsecops101
 on:
   push:
     branches:
-      - master
+      - default
   pull_request:
     branches:
-      - '*'
+      - default
 env:
   DOTNET_VERSION: '2.2.402'     
 
