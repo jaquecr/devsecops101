@@ -9,7 +9,6 @@ on:
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  DOTNET_VERSION: '2.2.402'
 
 jobs:
   build:
@@ -50,8 +49,6 @@ jobs:
       
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
       
       - name: Build and analyze
         shell: powershell
